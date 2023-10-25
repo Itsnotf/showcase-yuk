@@ -24,9 +24,11 @@ import ProductDetails from './pages/ProductDetails/ProductDetails'
 import Shop from './pages/Shop/Shop'
 import Showcase from './pages/Showcase/Showcase'
 import { useState, useEffect } from 'react'
+import { ThemeProvider } from './Context/ThemeContext'
 
 const Layout = () => {
   return (
+
     <div>
       <Header />
       <HeaderBottom />
@@ -36,6 +38,7 @@ const Layout = () => {
       <Footer />
       <FooterBottom />
     </div>
+
   )
 }
 const router = createBrowserRouter(
@@ -63,9 +66,11 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <div className="font-bodyFont dark:bg-slate-900">
-      <RouterProvider router={router} />
-    </div>
+    <ThemeProvider>
+      <div className="font-bodyFont bg-white dark:bg-slate-900 ">
+        <RouterProvider router={router} />
+      </div>
+    </ThemeProvider>
   )
 }
 
