@@ -4,7 +4,7 @@ import { useTheme } from '../../Context/ThemeContext'
 function Toggle() {
   const { theme, toggleTheme } = useTheme();
   return (
-    <label className="swap swap-rotate ml-3">
+    <label className="swap swap-rotate ml-3 ">
       <input onClick={toggleTheme} type="checkbox" />
 
       {/* sun icon */}
